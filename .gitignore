@@ -1,0 +1,7 @@
+ft_nm
+linker.ld
+symbols.c
+symbols.o
+obj/
+compile_flags.txt
+.clangd
