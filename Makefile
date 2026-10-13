@@ -4,6 +4,8 @@ SRCS	:=
 vpath %.c src/
 SRCS	+= utils.c
 SRCS	+= nm.c
+SRCS	+= elf64.c
+SRCS	+= elf32.c
 
 OBJS := $(SRCS:.c=.o)
 OBJS := $(addprefix obj/,$(OBJS))

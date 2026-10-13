@@ -94,4 +94,3 @@ int64_t		msbint64(char *data)
 {
 	return *(int64_t *)data;
 }
-

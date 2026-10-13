@@ -1,6 +1,9 @@
 #ifndef NM_H
 # define NM_H
 
+# include <stdio.h>
+# include <elf.h>
+
 /*!
  * ELF (Executable and Linking Format) Files are the object file format.
  * They come in three main types:
@@ -80,5 +83,16 @@
  * | unsigned char | 1 | 1 | unsigend small integer |
  *
  */
+
+struct nm_args {
+	unsigned int debug : 1;
+	unsigned int only_extern : 1;
+	unsigned int only_undefined : 1;
+	unsigned int reverse : 1;
+	unsigned int no_sort : 1;
+};
+
+int elf64(FILE *file, struct nm_args *args);
+int elf32(FILE *file, struct nm_args *args);
 
 #endif
